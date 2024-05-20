@@ -64,6 +64,7 @@ table {
 .banner__imagem {
     height: 320px;
     width: 100%;
+    opacity: .96;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -71,13 +72,13 @@ table {
 .banner__titulo {
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba(0,0,0,.35);
+    background-color: rgba(0,0,100,.35);
     color: #FFFFFF;
-    font-size: 40px;
-    width: 420px;
+    font-size: 20px;
+    width: 480px;
     line-height: 50px;
     position: absolute;
-    top: 80px;
+    top: 40px;
     left: 80px;
 }
 

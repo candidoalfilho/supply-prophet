@@ -31,9 +31,9 @@
             <section class="menu-lateral">
                 <nav class="menu-lateral__navegacao">
                     <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
-                    <a href="#"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Mais Broxinha</a>
-                    <a href="#"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Novas</a>
-                    <a href="#"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Surpreenda-me</a>
+                    <a href="#infra"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}">Infraestrutura</a>
+                    <a href="#novidades"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Novidades</a>
+                    <a href="#comunidade"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Comunidade</a>
                 </nav>
             </section>
             <!-- container de conteudo de imagem, segura o conteudo e estrutura a seção para conteudos -->
@@ -43,28 +43,34 @@
                     <h1 class="banner__titulo"> A Inteligência Artificial para solucionar sua logística!</h1>
                 </section>
                 <section class="tags">
-                    <p class="tags__titulo">Busque por tags:</p>
+                    <p class="tags__titulo">Os melhores modelos disponíveis para seu negócio:</p>
                     <ul class="tags__lista">
-                        <li class="tags__tag">Nebulosa</li>
-                        <li class="tags__tag">Estrela</li>
-                        <li class="tags__tag">Galáxia</li>
-                        <li class="tags__tag">Planeta</li>
+                        <li class="tags__tag">ARIMA</li>
+                        <li class="tags__tag">SARIMA</li>
+                        <li class="tags__tag">Lasso</li>
+                        <li class="tags__tag">Prophet</li>
                     </ul>
                 </section>
                 <!-- Galeria mostrando as imagens, cada imagem tem uma "div" com classe "cards" para estilização do css -->
-                <section class="galeria">
+                <div class="alert-wrapper">
+                    
+                        <h1>A solução completa para Supply Chain</h1>
+                        <h2>Nossos modelos garantem uma performance elevada de gerenciamento de estoque e previsão de demanda</h2>
+                    
+                </div>
+                <section class="galeria" id="infra">
                     <div class="cards">
-                        <h2 class="cards__titulo">Navegue pela galeria</h2>
+                        <h2 class="cards__titulo">Infraestrutura</h2>
                         <ul class="cards__lista">
                             <li class="card">
                                 <a href="{% url 'imagem' %}">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/demandforecast.jpg' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                <span class="card__tag">Analytics</span>
                                 <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
+                                    <p class="card__titulo">Estado da Arte da Previsão de Demanda</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
+                                        <p class="card__descricao">Modelos modernos e conceituados</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
                                         </span>
@@ -73,13 +79,13 @@
                             </li>
                             <li class="card">
                                 <a href="{% url 'imagem' %}">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/security.jpg' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                <span class="card__tag">Segurança</span>
                                 <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
+                                    <p class="card__titulo">Aplicação segura</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
+                                        <p class="card__descricao">Criptografia em todas etapas e segurança de dados</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
                                         </span>
@@ -88,13 +94,13 @@
                             </li>
                             <li class="card">
                                 <a href="{% url 'imagem' %}">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/decision.jpg' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                <span class="card__tag">Gestão</span>
                                 <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
+                                    <p class="card__titulo">Automação do processo de decisão</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
+                                        <p class="card__descricao">Análise prescritiva de dados</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
                                         </span>
@@ -103,52 +109,104 @@
                             </li>
                             <li class="card">
                                 <a href="{% url 'imagem' %}">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/finance.jpg' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                <span class="card__tag">Finanças</span>
                                 <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
+                                    <p class="card__titulo">Controle financeiro de estoques</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
+                                        <p class="card__descricao">Automação de processo de contabilidade dos estoques</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
                                         </span>
                                     </div>
                                 </div>
                             </li>
-                            <li class="card">
-                                <a href="{% url 'imagem' %}">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
-                                </a>
-                                <span class="card__tag">Estrelas</span>
-                                <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
-                                    <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
-                                        <span>
-                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
-                                        </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card">
-                                <a href="{% url 'imagem' %}">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
-                                </a>
-                                <span class="card__tag">Estrelas</span>
-                                <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
-                                    <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
-                                        <span>
-                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
-                                        </span>
-                                    </div>
-                                </div>
-                            </li>
+                            
                         </ul>
                     </div>
                 </section>
+
+                <section class="galeria" id="novidades">
+                    <div class="cards">
+                        <h2 class="cards__titulo">Novidades</h2>
+                        <ul class="cards__lista">
+                            <li class="card">
+                                <a href="{% url 'imagem' %}">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/demandforecast.jpg' %}" alt="foto">
+                                </a>
+                                <span class="card__tag">Beta Release</span>
+                                <div class="card__info">
+                                    <p class="card__titulo">Versão 1.0 Beta lançada</p>
+                                    <div class="card__texto">
+                                        <p class="card__descricao">Teste agora!</p>
+                                        <span>
+                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <a href="{% url 'imagem' %}">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/security.jpg' %}" alt="foto">
+                                </a>
+                                <span class="card__tag">Criptografia</span>
+                                <div class="card__info">
+                                    <p class="card__titulo">Reforço no algoritmo de criptografia</p>
+                                    <div class="card__texto">
+                                        <p class="card__descricao">Uso de sistemas caóticos para desenvolver criptografia</p>
+                                        <span>
+                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="galeria" id="comunidade">
+                    <div class="cards">
+                        <h2 class="cards__titulo">Comunidade</h2>
+                        <ul class="cards__lista">
+                            <li class="card">
+                                <a href="{% url 'imagem' %}">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/demandforecast.jpg' %}" alt="foto">
+                                </a>
+                                <span class="card__tag">Indústria</span>
+                                <div class="card__info">
+                                    <p class="card__titulo">Mais segmentos da indústria usam SupplyProphet</p>
+                                    <div class="card__texto">
+                                        <p class="card__descricao">300 gigantes empresas usam a SupplyProphet</p>
+                                        <span>
+                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <a href="{% url 'imagem' %}">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/security.jpg' %}" alt="foto">
+                                </a>
+                                <span class="card__tag">Bugs</span>
+                                <div class="card__info">
+                                    <p class="card__titulo">Bug Bounty: Ganhe dinheiro</p>
+                                    <div class="card__texto">
+                                        <p class="card__descricao">Ganhe prêmios por encontrar bugs em nosso sistema</p>
+                                        <span>
+                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </section>
+
             </section>
         </main>
     </div>

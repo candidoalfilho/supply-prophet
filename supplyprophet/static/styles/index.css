@@ -66,3 +66,22 @@
     background-color: #511a75;
     transition: .2s ease-in;
 }
+
+.alert-wrapper{
+    margin-top: 50px;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.alert-wrapper h1 {
+    font-size: 50px;
+}
+
+.alert-wrapper h2 {
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}

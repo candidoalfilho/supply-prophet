@@ -85,3 +85,30 @@
     font-weight: lighter;
     margin-bottom: 20px;
 }
+
+
+.dummyChart{
+    color: white;
+}
+
+.last-planning-title{
+    color: white;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.chart-container {
+    width: 45%;
+    margin: 20px 0;
+}
+canvas {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

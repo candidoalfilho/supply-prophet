@@ -1,11 +1,230 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SupplyProphet</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends 'galeria/base.html' %}
+{% load static  %}
+{% block content %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Container principal -->
+    <div class="pagina-inicial">
+        <header class="cabecalho">
+            <!-- Logo (está comentada e aguardando a logo que definirmos para nosso projeto) -->
+            <!-- <img src="{% static '/assets/logo/Logo(2).png' %}" alt="Logo da Alura Space" /> -->
+            <div class="cabecalho__conteudo">
+                <div class="cabecalho__busca">
+                    <div class="busca__fundo">
+                        <input class="busca__input" type="text" placeholder="O que você procura?" aria-label="Busca">
+                        <button class="busca__botao">
+                            <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %}" alt="ícone de busca">
+                        </button>
+                    </div>
+                </div>
+                <div style="display:flex;padding: 10px;">
+                    <div class="cabecalho__auth">
+                        <a href="/login" class="auth__botao">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- container de corpo dos conteudos, estrutura os conteudos do site. Sejam os cards ou sections -->
+        <main class="principal">
+            <!-- Menu -->
+            <section class="menu-lateral">
+                <nav class="menu-lateral__navegacao">
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Início</a>
+                    <a href="#infra"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}">Nova previsão</a>
+                    <a href="#novidades"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Últimas previsões</a>
+                    <a href="#comunidade"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Gerenciamento de estoque</a>
+                </nav>
+            </section>
+            <!-- container de conteudo de imagem, segura o conteudo e estrutura a seção para conteudos -->
+            <section class="conteudo">
+               
+                <h1 class="last-planning-title">Último planejamento:</h1>
+                <div class="container">
+                    <div class="chart-container">
+                        <canvas id="demandChart1"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="demandChart2"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="demandChart3"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="demandChart4"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- seção de rodapé, estrutura o rodapé e define suas classes para implemento dos assets -->
+    <footer class="rodape">
+        <div class="rodape__icones">
+            <a href="https://twitter.com/AluraOnline" target=”_blank” >
+                <img src="{% static '/assets/ícones/1x/twitter.png' %}" alt="ícone twitter">
+            </a>
+            <a href="https://www.instagram.com/aluraonline/" target=”_blank” >
+                <img src="{% static '/assets/ícones/1x/instagram.png' %}" alt="ícone instagram">
+            </a>
+        </div>
+        <p class="rodape__texto">SupplyProphet 2024</p>
+    </footer>
+
+
+    <script>
+        // Dados e configurações para o primeiro gráfico
+        var ctx1 = document.getElementById('demandChart1').getContext('2d');
+        var demandChart1 = new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                datasets: [{
+                    label: 'Demanda histórica',
+                    data: [120, 150, 180, 130, 170, 160, 190],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#333'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: '#333'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#333'
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Demanda histórica',
+                        color: '#333',
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            }
+        });
+
+        // Dados e configurações para o segundo gráfico
+        var ctx2 = document.getElementById('demandChart2').getContext('2d');
+        var demandChart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                datasets: [{
+                    label: 'Previsão de demanda',
+                    data: [130, 140, 150, 160, 170, 180, 190],
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#333'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: '#333'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#333'
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Previsão de demanda',
+                        color: '#333',
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            }
+        });
+
+        // Dados e configurações para o terceiro gráfico
+        var ctx3 = document.getElementById('demandChart3').getContext('2d');
+        var demandChart3 = new Chart(ctx3, {
+            type: 'pie',
+            data: {
+                labels: ['Produto A', 'Produto B', 'Produto C'],
+                datasets: [{
+                    label: 'Distribuição de demanda',
+                    data: [30, 50, 20],
+                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)'],
+                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#333'
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Distribuição da Demanda por produto',
+                        color: '#333',
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            }
+        });
+
+        // Dados e configurações para o quarto gráfico
+        var ctx4 = document.getElementById('demandChart4').getContext('2d');
+        var demandChart4 = new Chart(ctx4, {
+            type: 'doughnut',
+            data: {
+                labels: ['Região 1', 'Região 2', 'Região 3'],
+                datasets: [{
+                    label: 'Demanda regional',
+                    data: [40, 35, 25],
+                    backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 206, 86, 0.2)'],
+                    borderColor: ['rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 206, 86, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#333'
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Distribuição da demanda regional',
+                        color: '#333',
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+{% endblock content %} 

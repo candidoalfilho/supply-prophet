@@ -9,3 +9,6 @@ def signin(request):
 
 def imagem(request):
     return render(request, 'galeria/imagem.html')
+
+def overview(request):
+    return render(request, 'overview.html')

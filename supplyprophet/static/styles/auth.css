@@ -1,0 +1,58 @@
+.page-wrapper {
+    padding: 100px;
+}
+
+.content-wrapper {
+    margin-top: 100px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.main-info {
+    text-align: center;
+    color: white;
+    font-size: 55px;
+}
+
+.option{
+    border: 1px;
+    border-radius: 20px;
+    border: 1px inset #7B78E5;
+    font-size: 14px;
+    margin: 20px;
+    width: 420px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    transition: .25 ease-in;
+}
+
+.option:hover{
+    cursor: pointer;
+    transition: .25s ease-in;
+    background-color: #7B78E5;
+}
+
+.options-wrapper{
+    display: inline-flex;
+    align-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer h2{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}

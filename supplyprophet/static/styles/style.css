@@ -33,7 +33,7 @@ body {
     line-height: 1;
     font-family: 'Space Grotesk', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(#041833,#04244F,#154580);
+    background: linear-gradient(#041833,#04244F,#0b203a);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -55,19 +55,26 @@ table {
 }
 
 .banner {
-    width: auto;
+    height: 320px;
+    width: 90%;
     position: relative;
     margin-bottom: 1.5rem;
 }
 
 .banner__imagem {
+    height: 320px;
     width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .banner__titulo {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.35);
     color: #FFFFFF;
     font-size: 40px;
-    width: 350px;
+    width: 420px;
     line-height: 50px;
     position: absolute;
     top: 80px;

@@ -1,0 +1,68 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.cabecalho__conteudo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.cabecalho__busca {
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #C98CF1,#7B78E5);
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    padding: 2px;
+    width: auto; 
+}
+
+.busca__input {
+    border: none;
+    padding: 5px;
+    outline: none;
+}
+
+.busca__botao {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.busca__icone {
+    width: 20px;
+    height: 20px;
+}
+
+.cabecalho__auth {
+    display: flex;
+    align-items: center;
+    margin: 15px
+}
+
+.auth__botao {
+
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px inset #62609b;
+    text-decoration: none;
+    display: flex;
+    height: auto;
+    color: aliceblue;
+    justify-content: space-between;
+    width: auto; 
+    transition: .2s ease-in;
+}
+
+
+.auth__botao:hover {
+    background-color: #511a75;
+    transition: .2s ease-in;
+}

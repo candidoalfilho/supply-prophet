@@ -1,8 +1,10 @@
 {% extends 'galeria/base.html' %}
 {% load static  %}
 {% block content %}
+    <!-- Container principal -->
     <div class="pagina-inicial">
         <header class="cabecalho">
+            <!-- Logo (está comentada e aguardando a logo que definirmos para nosso projeto) -->
             <!-- <img src="{% static '/assets/logo/Logo(2).png' %}" alt="Logo da Alura Space" /> -->
             <div class="cabecalho__busca">
                 <div class="busca__fundo">
@@ -11,7 +13,9 @@
                 </div>
             </div>
         </header>
+        <!-- container de corpo dos conteudos, estrutura os conteudos do site. Sejam os cards ou sections -->
         <main class="principal">
+            <!-- Menu -->
             <section class="menu-lateral">
                 <nav class="menu-lateral__navegacao">
                     <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
@@ -20,6 +24,7 @@
                     <a href="#"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Surpreenda-me</a>
                 </nav>
             </section>
+            <!-- container de conteudo de imagem, segura o conteudo e estrutura a seção para conteudos -->
             <section class="conteudo">
                 <section class="banner">
                     <img class="banner__imagem" src="{% static '/assets/imagens/Banner(2).png' %}" alt="banner Alura Space">
@@ -34,6 +39,7 @@
                         <li class="tags__tag">Planeta</li>
                     </ul>
                 </section>
+                <!-- Galeria mostrando as imagens, cada imagem tem uma "div" com classe "cards" para estilização do css -->
                 <section class="galeria">
                     <div class="cards">
                         <h2 class="cards__titulo">Navegue pela galeria</h2>
@@ -134,6 +140,7 @@
             </section>
         </main>
     </div>
+    <!-- seção de rodapé, estrutura o rodapé e define suas classes para implemento dos assets -->
     <footer class="rodape">
         <div class="rodape__icones">
             <a href="https://twitter.com/AluraOnline" target=”_blank” >

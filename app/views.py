@@ -12,3 +12,6 @@ def imagem(request):
 
 def overview(request):
     return render(request, 'overview.html')
+
+def newplanning(request):
+    return render(request, 'new_planning.html')
